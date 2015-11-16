@@ -47,6 +47,10 @@ test('object', function (assert) {
     }
 });
 
+test('object with strings', function (assert) {
+    assert.equal(moment({year: '2014', month: '7', day: '31'}).isValid(), true, 'string object + isValid');
+});
+
 test('multi format array copying', function (assert) {
     var importantArray = ['MM/DD/YYYY', 'YYYY-MM-DD', 'MM-DD-YYYY'];
     moment('1999-02-13', importantArray);
